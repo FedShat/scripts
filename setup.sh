@@ -30,5 +30,6 @@ pip3 install -r ~/build/PublishBot/requirments.txt
 git clone https://github.com/morhetz/gruvbox.git ~/.vim/pack/default/start/gruvbox
 
 # Copy vimrc
+# Thanks @liferooter
 cp -v .vimrc ~/.vimrc
 
