@@ -16,6 +16,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # Installing powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 sed -i "s#ZSH_THEME="robbyrussell"#ZSH_THEME="powerlevel10k/powerlevel10k"#g" ~/.zshrc
+echo 'alias regen="make ARCH=arm64 platina_defconfig; mv .config arch/arm64/configs/platina_defconfig"' >> ~/.zshrc
 
 # Clone kernel build dependencies
 mkdir ~/build
