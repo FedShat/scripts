@@ -1,5 +1,5 @@
-export chat_id="-1001115967921"
-export product_filename="AlpacaKernel-*.zip"
+export CHAT_ID="-1001115967921"
+export PRODUCT_FILENAME="AlpacaKernel-*.zip"
 export KBUILD_BUILD_USER="fedshat"
 export KBUILD_BUILD_HOST="fedshatci"
 export TZ=Europe/Moscow
