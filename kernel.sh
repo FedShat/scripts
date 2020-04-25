@@ -3,6 +3,7 @@ export PRODUCT_FILENAME="AlpacaKernel-*.zip"
 export KBUILD_BUILD_USER="fedshat"
 export KBUILD_BUILD_HOST="fedshatci"
 export TZ=Europe/Moscow
+export KERNEL_USE_CCACHE=1
 
 python3 ~/build/PublishBot/main.py --before
 export FILENAME="AlpacaKernel-v4-GCC-9.x-LTO-$(date +"%y%m%d")-$(date +"%H%M").zip"
