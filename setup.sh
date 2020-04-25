@@ -24,7 +24,7 @@ git clone https://github.com/arter97/arm64-gcc.git --depth=1 ~/build/tools/arm64
 git clone https://github.com/kdrag0n/proton-clang.git --depth=1 ~/build/tools/proton-clang
 git clone https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9 -b lineage-17.1 --depth=1 ~/build/tools/gcc-4.9
 git clone https://github.com/AlpacaGang/AnyKernel3.git -b master ~/build/AK3
-pip3 install -r ~/build/PublishBot/requirments.txt
+pip3 install -r ~/build/PublishBot/requirements.txt
 
 # Clone gruvbox theme
 git clone https://github.com/morhetz/gruvbox.git ~/.vim/pack/default/start/gruvbox
