@@ -6,7 +6,7 @@ export TZ=Europe/Moscow
 export KERNEL_USE_CCACHE=1
 
 python3 ~/build/PublishBot/main.py --before
-export FILENAME="AlpacaKernel-v4-GCC-9.x-LTO-$(date +"%y%m%d")-$(date +"%H%M").zip"
+export FILENAME="AlpacaKernel-v5-GCC-9.x-LTO-$(date +"%y%m%d")-$(date +"%H%M").zip"
 
 rm .config
 echo "========== Making defconfig =========="
