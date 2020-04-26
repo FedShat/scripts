@@ -26,3 +26,4 @@ fi
 python3 ~/build/PublishBot/main.py --after
 rm ~/time
 rm ~/build/AK3/*.zip
+cd ~/build/kernel_xiaomi_platina
