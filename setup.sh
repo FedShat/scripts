@@ -9,6 +9,8 @@ sudo apt-get -y install git-core gnupg flex bison gperf build-essential zip curl
 git config --global user.name "FedorShatokhin2005"
 git config --global user.email "groza01i@gmail.com"
 git config --global credential.helper store
+git config --global commit.gpgsign true
+git config --global user.signingkey "688C4735813B4124"
 
 # Installing oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
