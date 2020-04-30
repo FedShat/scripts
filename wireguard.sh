@@ -1,7 +1,7 @@
 #!/bin/bash
 USER_AGENT="WireGuard-AndroidROMBuild/0.3 ($(uname -a))"
 
-read -p 'Version: ' VERSION
+read VERSION
 
 rm -rf net/wireguard
 mkdir -p net/wireguard
