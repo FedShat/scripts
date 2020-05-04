@@ -22,7 +22,7 @@ echo 'alias regen="make ARCH=arm64 platina_defconfig; mv .config arch/arm64/conf
 
 # Clone kernel build dependencies
 mkdir ~/build
-git clone https://github.com/AlpacaGang/Publishbot -b local ~/build/PublishBot
+git clone https://github.com/AlpacaGang/Publishbot ~/build/PublishBot
 git clone https://github.com/arter97/arm64-gcc.git --depth=1 ~/build/tools/arm64-gcc
 git clone https://github.com/AlpacaGang/AnyKernel3.git -b master ~/build/AK3
 pip3 install -r ~/build/PublishBot/requirements.txt
