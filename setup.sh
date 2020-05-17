@@ -3,7 +3,7 @@
 # Installing packages
 
 sudo apt update
-sudo apt-get -y install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-aarch64-linux-gnu libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip bc ccache git imagemagick lib32readline-dev lib32z1-dev liblz4-tool pngquant libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 lzop pngcrush rsync schedtool squashfs-tools openjdk-8-jdk p7zip-full meld brotli qt4-qmake qt5-qmake android-tools-adb android-tools-fastboot python-networkx texinfo maven swapspace libncurses5 zsh python3-pip vim
+sudo apt-get -y install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-aarch64-linux-gnu libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip bc ccache git imagemagick lib32readline-dev lib32z1-dev liblz4-tool pngquant libncurses5-dev libsdl1.2-dev libssl-dev libxml2 lzop pngcrush rsync schedtool squashfs-tools openjdk-8-jdk p7zip-full meld brotli qt5-qmake android-tools-adb android-tools-fastboot texinfo maven swapspace libncurses5 zsh python3-pip vim
 
 # Configure git
 git config --global user.name "FedorShatokhin2005"
