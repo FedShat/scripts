@@ -13,12 +13,12 @@ git config --global commit.gpgsign true
 git config --global user.signingkey "688C4735813B4124"
 
 # Installing oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Installing powerlevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
-sed -i "s#ZSH_THEME="robbyrussell"#ZSH_THEME="powerlevel10k/powerlevel10k"#g" ~/.zshrc
-echo 'alias regen="make ARCH=arm64 platina_defconfig; mv .config arch/arm64/configs/platina_defconfig"' >> ~/.zshrc
+# git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+# sed -i "s#ZSH_THEME="robbyrussell"#ZSH_THEME="powerlevel10k/powerlevel10k"#g" ~/.zshrc
+echo 'alias regen="make ARCH=arm64 platina_defconfig; mv .config arch/arm64/configs/platina_defconfig"' >> ~/.bashrc
 
 # Clone kernel build dependencies
 mkdir ~/build
