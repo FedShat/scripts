@@ -28,7 +28,7 @@ git clone https://github.com/AlpacaGang/AnyKernel3.git -b master ~/build/AK3
 pip3 install -r ~/build/PublishBot/requirements.txt
 
 # Clone gruvbox theme
-git clone https://github.com/morhetz/gruvbox.git ~/.vim/pack/default/start/gruvbox
+git clone --depth=1 https://github.com/morhetz/gruvbox.git ~/.vim/pack/default/start/gruvbox
 
 # Clone ale plugin
 git clone --depth=1 https://github.com/dense-analysis/ale.git ~/.vim/pack/git-plugins/start/ale
