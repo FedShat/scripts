@@ -22,9 +22,9 @@ set smartindent
 function Compile()
     let res = '"/tmp/' . expand('%:t:r') . '.o"'
     if expand('%:e') ==? 'cpp'
-        exec '!g++ -std=gnu++17 -DLOCAL -O0 -g -Wextra -fsanitize=undefined,address "%" -o ' . res
+        exec '!clang++ -std=gnu++17 -DLOCAL -O0 -g -Wextra -fsanitize=undefined,array-bounds,address "%" -o ' . res
     elseif expand('%:e') ==? 'c'
-        exec '!gcc -DLOCAL -O0 -g -Wextra -fsanitize=undefined,address "%" -o ' . res
+        exec '!clang -DLOCAL -O0 -g -Wextra -fsanitize=undefined,array-bounds,address "%" -o ' . res
     endif
 endfunction
 
