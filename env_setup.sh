@@ -12,8 +12,6 @@ git config --global credential.helper store
 git config --global commit.gpgsign true
 git config --global user.signingkey "688C4735813B4124"
 
-echo 'alias regen="make ARCH=arm64 platina_defconfig; mv .config arch/arm64/configs/platina_defconfig"' >> ~/.bashrc
-
 # Clone kernel build dependencies
 mkdir ~/build
 git clone https://github.com/AlpacaGang/Publishbot ~/build/PublishBot
