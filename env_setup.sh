@@ -19,6 +19,9 @@ git clone https://github.com/arter97/arm64-gcc.git --depth=1 ~/build/tools/arm64
 git clone https://github.com/AlpacaGang/AnyKernel3.git -b master ~/build/AK3
 pip3 install -r ~/build/PublishBot/requirements.txt
 
+git clone https://github.com/FedorShatokhin2005/aliases ~/.aliases
+echo "source ~/.aliases/aliases" >> ~/.zshrc
+
 # Clone gruvbox theme
 git clone --depth=1 https://github.com/morhetz/gruvbox.git ~/.vim/pack/default/start/gruvbox
 
