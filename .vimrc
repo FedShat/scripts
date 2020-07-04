@@ -11,13 +11,15 @@ set wildmenu
 set showcmd
 set number
 set history=10000
-colorscheme gruvbox
+colorscheme onehalfdark
 set background=dark
 set tabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab
 set smartindent
+
+let g:airline_theme='onehalfdark'
 
 function Compile()
     let res = '"/tmp/' . expand('%:t:r') . '.o"'
