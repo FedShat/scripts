@@ -1,11 +1,25 @@
 #!/bin/bash
-USER_AGENT="WireGuard-AndroidROMBuild/0.3 ($(uname -a))"
 
-read -p "Enter version: " VERSION
+while [[ ${#} -ge 1 ]]; do
+    case ${1} in
+        "-i"|"--init") INIT=true ;;
+        "-t"|"--tag") shift; VERSION=${1} ;;
+        "-u"|"--update") UPDATE=true ;;
+    esac
+    shift
+done
 
-rm -rf net/wireguard
-mkdir -p net/wireguard
-curl -A "$USER_AGENT" -LsS --connect-timeout 30 "https://git.zx2c4.com/wireguard-linux-compat/snapshot/wireguard-linux-compat-$VERSION.tar.xz" | tar -C "net/wireguard" -xJf - --strip-components=2 "wireguard-linux-compat-$VERSION/src"
-sed -i 's/tristate/bool/;s/default m/default y/;' net/wireguard/Kconfig
-git add net/wireguard
-git commit -s -m "net: wireguard: Update to $VERSION"
+REPO="https://github.com/WireGuard/wireguard-linux-compat"
+SUBFOLDER="net/wireguard"
+
+git fetch "${REPO}" "${VERSION}"
+
+if [[ -n ${INIT} ]]; then
+    git subtree add --prefix="${SUBFOLDER}" "${REPO}" "${VERSION}"
+elif [[ -n ${UPDATE} ]]; then
+        GIT_MAJOR_VERSION=$(git --version | head -n 1 | cut -d . -f 1 | awk '{print $3}')
+        GIT_MINOR_VERSION=$(git --version | head -n 1 | cut -d . -f 2)
+        [[ ${GIT_MAJOR_VERSION} -gt 2 ]] || [[ ${GIT_MAJOR_VERSION} -eq 2 && ${GIT_MINOR_VERSION} -ge 15 ]] && SIGNOFF=true
+        git subtree pull --prefix="${SUBFOLDER}" "${REPO}" "${VERSION}"
+fi
+
