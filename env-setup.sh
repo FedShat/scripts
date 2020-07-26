@@ -11,6 +11,7 @@ git config --global user.email "groza01i@gmail.com"
 git config --global credential.helper store
 git config --global commit.gpgsign true
 git config --global user.signingkey "688C4735813B4124"
+git config --global merge.log true
 
 # Clone kernel build dependencies
 mkdir ~/build
