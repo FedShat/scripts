@@ -23,3 +23,4 @@ elif [[ -n ${UPDATE} ]]; then
         git subtree pull --prefix="${SUBFOLDER}" "${REPO}" "${VERSION}"
 fi
 
+git commit --amend
