@@ -12,8 +12,6 @@ done
 REPO="https://github.com/WireGuard/wireguard-linux-compat"
 SUBFOLDER="net/wireguard"
 
-git fetch "${REPO}" "${VERSION}"
-
 if [[ -n ${INIT} ]]; then
     git subtree add --prefix="${SUBFOLDER}" "${REPO}" "${VERSION}"
 elif [[ -n ${UPDATE} ]]; then
